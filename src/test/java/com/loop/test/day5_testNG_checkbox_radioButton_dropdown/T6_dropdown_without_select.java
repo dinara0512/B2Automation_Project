@@ -1,5 +1,6 @@
 package com.loop.test.day5_testNG_checkbox_radioButton_dropdown;
 
+import com.loop.test.day6_alerts_iframes.base.TestBase;
 import com.loop.test.utilities.DocuportConstants;
 import com.loop.test.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class T6_dropdown_without_select {
+public class T6_dropdown_without_select extends TestBase {
          /*
     1. login as an advisor
     2. go to received document
