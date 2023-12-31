@@ -1,6 +1,7 @@
 package com.loop.test.day7_windows;
 
 import com.loop.test.day6_alerts_iframes.base.TestBase;
+import com.loop.test.utilities.BrowserUtilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
@@ -30,14 +31,16 @@ public class T2_windows extends TestBase {
         ((JavascriptExecutor) driver).executeScript("window.open('http://etsy.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
 
-        Set<String> windowHandles = driver.getWindowHandles();
-
-        for (String window : windowHandles) {
-            driver.switchTo().window(window);
-            System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
-            if (driver.getCurrentUrl().toLowerCase().contains("etsy")) {
-                break;
-            }
-        }
+//        Set<String> windowHandles = driver.getWindowHandles();
+//
+//        for (String window : windowHandles) {
+//            driver.switchTo().window(window);
+//            System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
+//            if (driver.getCurrentUrl().toLowerCase().contains("etsy")) {
+//                break;
+//            }
+//        }
+           // BrowserUtilities.BrowserUtils.switchWindowAndValidate(driver,"facebook.com","facebook");
+            BrowserUtilities.BrowserUtils.switchWindow(driver,"facebook");
     }
 }

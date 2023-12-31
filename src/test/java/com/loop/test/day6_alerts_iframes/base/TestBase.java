@@ -14,9 +14,9 @@ public class TestBase {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
     }
-
-    @AfterMethod
-    public void tearDownMethod () {
-        driver.quit();
-    }
+//
+//    @AfterMethod
+//    public void tearDownMethod () {
+//        driver.quit();
+//    }
 }
