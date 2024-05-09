@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.Set;
 
 import static org.testng.AssertJUnit.assertTrue;
@@ -169,4 +170,8 @@ public static void switchWindow (WebDriver driver, String targetTitle) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
+
+//    public static void print_list () {
+//        System.out.println(Arrays.toString(smartBearSoftware.lineList.toArray()));
+    //}
 }

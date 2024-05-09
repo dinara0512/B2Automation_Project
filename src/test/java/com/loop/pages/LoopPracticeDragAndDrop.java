@@ -7,15 +7,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoopPracticeDragAndDrop {
-//    WebElement element = Driver.getDriver().findElement(By.id("id"));
-    @FindBy (xpath =" //*[@id='draggable']")
+    //    WebElement element = Driver.getDriver().findElement(By.id("id"));
+    @FindBy(xpath = " //*[@id='draggable']")
     public WebElement smallCircle;
 
-    @FindBy (id = "droptarget")
+    @FindBy(id = "droptarget")
     public WebElement bigCircle;
 
+    @FindBy(xpath = "//div[@class='container']")
+    public WebElement outsideCircle;
 
-    public LoopPracticeDragAndDrop () {
-        PageFactory.initElements(Driver.getDriver(),this);
+    public String expected = "Now drop...";
+    public String expected2 = "Try again!";
+    public LoopPracticeDragAndDrop() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 }
